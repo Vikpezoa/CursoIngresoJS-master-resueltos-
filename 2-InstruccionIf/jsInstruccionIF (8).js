@@ -8,16 +8,28 @@ function mostrar()
     edad = document.getElementById("edad").value;
     estado = document.getElementById("estadoCivil").value;
 
+    if(!(edad<=18 && estado!="Soltero")) {
+
+        if(edad>18 && estado=="Soltero") {
+        alert("Es soltero y no es menor");
+        }      
+   }
+
+
+    /* Versión anterior mía antes de correción clases:
+    
     if(edad<18 || (estado != "Soltero")) { 
-        //No hacer nada
+        //No hacer nada <- ERROR: NO SE PUEDE HACER if VACÍO
     }
     
     else {
         //Muestro alert con mensaje
     
-        alert("Es soltero y no es menor");  
+          alert("Es soltero y no es menor");
     }
     
+    
+    */
     
 /*  Error 1:
 

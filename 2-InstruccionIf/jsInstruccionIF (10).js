@@ -4,8 +4,8 @@ function mostrar()
 
 	var nota;
 	var resultado;
-	nota = Math.round(Math.random()*10);
-
+	nota = Math.floor(Math.random()*(10-1)+1);
+	
 	if(nota >= 9) { 
 		// Para notas 9 y 10 muestro el mensaje: EXCELENTE
 		resultado = "EXCELENTE";
@@ -23,8 +23,21 @@ function mostrar()
 			resultado = "Vamos, la proxima se puede";
 
 	}
-	alert("Nota: " + nota + ". " + resultado);
+	alert("Nota: " + nota + ". " + resultado); 
 
-	
+	/* Otra forma:
+
+	if(nota >=9) {
+		alert("Excelente");
+	}
+		else {
+			if(nota>=4) {
+				alert("Aprobo");
+			}
+				else {
+					alert("Vamos, la próxima se puede");
+				}	
+		}
+		*/
 
 }//FIN DE LA FUNCIÓN

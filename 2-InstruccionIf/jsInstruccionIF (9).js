@@ -2,11 +2,17 @@ function mostrar()
 {
 	//Genero el número RANDOM entre 1 y 10 
 
-		var random = Math.round(Math.random()*10);
+		var random = Math.floor(Math.random()*(10-1)+1);
 		alert("Número aleatorio entre 0 y 10: "+ random);
 
 
-	/*Error: uso de función y demás que no corresponden. Debía usar Math.round
+
+
+	/*
+	
+	Anterior usando otra fc: var random = Math.round(Math.random()*10);
+	
+	Error: uso de función y demás que no corresponden. Debía usar Math.round
 
 	var número;
 	número=document.getElementById("FormIngreso").value;
