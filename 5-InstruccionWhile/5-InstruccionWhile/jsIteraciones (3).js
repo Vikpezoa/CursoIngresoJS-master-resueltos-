@@ -1,9 +1,11 @@
 function mostrar()
 {
-var clave = prompt("ingrese el número clave.");
+    var clave = prompt("ingrese el número clave.");
+    while(!(clave == "utn750")) 
+        {
+            //puse prompt solo y por eso no salia del bucle al ingresar incorrecta y luego correcta
+        clave = prompt("error, ingrese el número clave.");   
+        }
+        console.log("Clave correcta. Bienvenido");
 
-while(clave!="utn750") {
-    prompt("ingrese el número clave.");
-}
-alert("Clave correcta, bienvenido ricardo");
 }//FIN DE LA FUNCIÓN
