@@ -1,5 +1,14 @@
 function mostrar()
 {
+	var numero;
+	numero = prompt("ingrese un numero entre 0 y 9");
+	while(!(numero > 0 && numero <= 9))
+		{
+		numero=prompt("error, ingrese numero entre 0 y 9");
+		}
+		console.log("correcto");
+	
+	/*
 	var numero = prompt("ingrese un numero entre 0 y 10");
 	while(!(numero>0 && numero<10)) 
 		// while(numero<0 OR numero>10)
@@ -7,6 +16,7 @@ function mostrar()
 		numero=prompt("error, ingrese numero entre 0 y 10");
 		}
 		console.log("correcto");
+		*/
 
 	/*
 	var numero;

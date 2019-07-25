@@ -1,6 +1,65 @@
 function mostrar()
 {
+var contador=0;
+var contadorPositivos=0;
+var contadorNegativos=0;
+var contadorCeros=0;
+var contadorPares=0;
+var acumuladorPositivos=0;
+var acumuladorNegativos=0;
+// si no lo inicializo me tirará NaN
+var promedioPositivos;
+var promedioNegativos;
+// no se debe inicializar (igualar a 0) porque no lo requiere en este caso
+var numero;
+//declarar contadores y variables
+var respuesta=true;                                                                  
 
+while(respuesta==true) {
+	numero=prompt("ingrese un numero: ");
+	numero=parseInt(numero);
+	
+	if(numero>0)
+	{
+		contadorPositivos++;
+		acumuladorPositivos*=0;
+	}
+	else                               
+		{
+		if(numero<0) 
+		{
+			contadorNegativos++;
+			acumuladorNegativos+=numero;
+		}                                          
+	}
+}
+
+if(contadorPositvios!=0)
+{ 
+promedioPositivos = acumuladorPositivos/contadorPositivos
+}
+else  
+{
+	promedioPositivos="No se ingresaron numeros positvos"
+}
+
+if(contadorNegativos!=0)
+{ 
+promedioNegativos = acumuladorNegativos/contadorNegativos
+}
+else
+{
+	promedioNegativos="No se ingresaron numeros negativos"
+}
+
+document.write("1. suma de positivos: " + acumuladorPositivos)
+document.write("suma de negativos: " + acumuladorNegativos)
+document.write("cantidad de positivos: " + contadorPositivos)
+document.write("cantidad de positivos: " + contadorPositivos)
+ 
+
+
+/*
 	var contador=0;
 	var numero;
 	var numeroDos;
@@ -26,6 +85,7 @@ function mostrar()
 	{
 		
 	}
+	*/
 	/*
 
 	if(isNaN(suma))
