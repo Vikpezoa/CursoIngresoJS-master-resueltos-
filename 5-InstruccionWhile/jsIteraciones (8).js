@@ -8,22 +8,29 @@ function mostrar()
 	var respuesta="si";
 	var positivo;
 	var negativo;
+	do 
+	{ 
+		numero = parseInt(prompt("ingrese un numero"));
 
 	while(respuesta=="si")
 	{
-		numero=prompt("Ingrese numero positivo o negativo");
+		alert("eso no es un nro");
+		numero=parseInt(prompt("Ingrese numero positivo o negativo"));
 
 		if(numero<0)
 		{
-			numero=parseFloat(numero);
-			acumuladorNegativo=acumuladorNegativo*numero;
+
+			negativo=negativo*numero;
+			//acumuladorNegativo=acumuladorNegativo*numero;
+			contNegativos++;
 		}
+		
 		else
 		{
-			numero=parseFloat(numero);
-			acumuladorPositivo=acumuladorPositivo+numero;
+			
+			positivo=positivo+numero;
 		}
-		respuesta=prompt("Para continuar presione si")
+		respuesta=prompt("Quiere ingresar otro numero?");
 	}
 
 alert("El resultado del producto es: "+acumuladorNegativo);
